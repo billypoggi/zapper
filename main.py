@@ -56,11 +56,12 @@ def play_video(video_path):
     print("Video finished.")
 
 if __name__ == '__main__':
+    while True:
     # Get the video file path from the user
-    print ("Hello world")
-    path = input("Enter the full path to the video file: ")
-#   path = "./testvid.mp4" #("Enter the full path to the video file: ")
-    play_video(path)
-    print ("doneski")
+        print ("Hello world")
+        path = input("Enter the full path to the video file: ")
+#       path = "./testvid.mp4" #("Enter the full path to the video file: ")
+        play_video(path)
+        print ("doneski")
 
 # small final update
