@@ -1,3 +1,5 @@
+import sys
+print(sys.executable)
 import cv2
 import os
 
@@ -54,6 +56,19 @@ def play_video(video_path):
     cap.release()
     cv2.destroyAllWindows()
     print("Video finished.")
+
+video_list = []
+try:
+    with open('videos.txt', 'r') as f:
+        # The .strip() function removes any accidental whitespace or newline characters
+        video_list = [line.strip() for line in f.readlines()]
+except FileNotFoundError:
+    print("Error: videos.txt not found.")
+
+# Now you can work with the list
+print(video_list)
+# Example: Access the first video filename
+# print(f"The first video is: {video_list[0]}")
 
 if __name__ == '__main__':
     while True:
